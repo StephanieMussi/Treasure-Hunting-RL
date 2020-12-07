@@ -1,1 +1,1 @@
-# Treasure_Hunting_Prolog
+# Treasure_Hunting_RL
