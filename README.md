@@ -1,5 +1,6 @@
 # Treasure_Hunting_RL
-This project aims to perform treasure hunting in a 3x3x3 grid-world-based environment.  
+This project aims to perform treasure hunting in a 3x3x3 grid-world-based environment using Reinforcement Learning.  
+
 ## Introduction  
 The 3D grid world is shown below:  
 <img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/world.png" width = 300 height = 225>  
@@ -25,5 +26,16 @@ The agent will take the intended action with a probability of 0.6. Besides, the 
 
 The agent will receive a reward when arriving at a state. A reward of 1 will be given to the agent only when it reaches the terminal state (3, 3, 3). When arriving at any other state, the agent will receive a reward of -0.1.  
 
+The setting of the world can be found in ["environment.py"](https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/environment.py).  
+
+
 ## Method
+The __Q-Learning Algorithm__ is used. For the choice of action at each step, the Epsilon-Greedy Policy is applied. This means that with a probability of (1 – ε), the action with highest Q-value is chosen, and with probability ε, a random action is chosen from the action space.  
+
+* Initially, the Q-value for all (s, a) pair is set as 0.
+* Then, for each step, the trajectory (s, a, s', r) is obtained, and it is used to update the Q-value with the following formula:  
+    Qnew(s, a)  = Qold(s, a) + α(r + γmaxAQold(s', A)  - Qold(s, a))
+* For each episode, the total reward is counted. 
+* Finally, after iterating for a predefined number of episodes, the final Q-table is obtained, and the optimistic action for each state can be chosen. The graph of episode reward vs. episode number is plotted to visualize the process of Q-Learning.
+
 ## Experiment Results
