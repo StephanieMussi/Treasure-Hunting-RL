@@ -124,14 +124,14 @@ Therefore, any action can be chosen at these states and there is no single best 
 |(3, 0, 0)	|Right	|(3, 0, 1)|	Up	|(3, 0, 2)|	Forward	|(3, 0, 3)	|Right|
 |(3, 1, 0)|	Up	|(3, 1, 1)	|Right	|(3, 1, 2)|	Up	|(3, 1, 3)|	Right|
 |(3, 2, 0)	|Up	|(3, 2, 1)	|Right	|(3, 2, 2)	|Up	|(3, 2, 3)	|Right|
-|(3, 3, 0)	Left	(3, 3, 1)	Up	(3, 3, 2)	Up		| | |  
+|(3, 3, 0)	|Left	|(3, 3, 1)	|Up|	(3, 3, 2)	Up|		| | |  
 
 It is observed that the best actions mostly belong to {Forward, Right, Up}. This is because from starting point (0, 0, 0) to ending point (3, 3, 3), all coordinates need to be incremented, which can be accomplished by these 3 actions.  
 
 For the first episode:  
-<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/graph.png" width = 730 height = 30>  
+<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/first.png" width = 730 height = 30>  
 For the last episode:  
-<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/graph.png" width = 730 height = 30>  
+<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/last.png" width = 730 height = 30>  
 In the process of Q-Learning, the number of total steps taken in an episode is decreases and the reward is increased, which means the agent performs better.  
 
 The graph of episode reward vs, episode is shown as below:  
