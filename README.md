@@ -36,7 +36,8 @@ The __Q-Learning Algorithm__ is used. For the choice of action at each step, the
 * Then, for each step, the trajectory (s, a, s', r) is obtained, and it is used to update the Q-value with the following formula:  
     Qnew(s, a)  = Qold(s, a) + α(r + γmaxAQold(s', A)  - Qold(s, a))
 * For each episode, the total reward is counted. 
-* Finally, after iterating for a predefined number of episodes, the final Q-table is obtained, and the optimistic action for each state can be chosen. The graph of episode reward vs. episode number is plotted to visualize the process of Q-Learning.
+* Finally, after iterating for a predefined number of episodes, the final Q-table is obtained, and the optimistic action for each state can be chosen. The graph of episode reward vs. episode number is plotted to visualize the process of Q-Learning.  
+The implementation of the Q-Learning algorithm can be found in["test.py"](https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/test.py).  
 
 ## Experiment Results
 After iterating for 500 episodes with maximum 500 steps each, the final Q-table is shown as below:
