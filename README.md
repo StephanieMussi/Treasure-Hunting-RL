@@ -106,5 +106,33 @@ After iterating for 500 episodes with maximum 500 steps each, the final Q-table 
 |(3, 3, 1)	|-0.05000|	0.20288	|-0.07982	|-0.08750|	__0.65123__	|-0.09375|
 |(3, 3, 2)|	-0.07510	|-0.04988	|-0.06211|	-0.08750	|__0.89534__	|-0.07500|  
   
-Accordingly, the best 
+Therefore, any action can be chosen at these states and there is no single best action.
 
+|(0, 0, 0)	|(any)	|(0, 0, 1)	|(any)	|(0, 0, 2)|	Backward|	(0, 0, 3)	|Right|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|(0, 1, 0)	|Right|	(0, 1, 1)	|Right	|(0, 1, 2)|	Forward|	(0, 1, 3)	|Right|
+|(0, 2, 0)	|Forward	|(0, 2, 1)	|Right|	(0, 2, 2)|	Up	|(0, 2, 3)|	Right|
+|(0, 3, 0)	|Right	|(0, 3, 1)|	Up	|(0, 3, 2)|	Forward	|(0, 3, 3)|	Forward|
+|(1, 0, 0)|	Forward	|(1, 0, 1)	|Forward	|(1, 0, 2)	|Right|	(1, 0, 3)|	Up|
+|(1, 1, 0)|	Up	|(1, 1, 1)	|Right	|(1, 1, 2)|	Up	|(1, 1, 3)	|Right|
+|(1, 2, 0)	|Forward|	(1, 2, 1)|	Right|	(1, 2, 2)|	Forward	|(1, 2, 3)|	Right|
+|(1, 3, 0)|	Down|	(1, 3, 1)|	Up	|(1, 3, 2)	|Up	|(1, 3, 3)	|Forward|
+|(2, 0, 0)|	Up|	(2, 0, 1)	|Right|	(2, 0, 2)|	Forward|	(2, 0, 3)|	Down|
+|(2, 1, 0)|	Right	|(2, 1, 1)|	Right	|(2, 1, 2)|	Up	|(2, 1, 3)	|Right|
+|(2, 2, 0)	|Right	|(2, 2, 1)	|Right|	(2, 2, 2)|	Up|	(2, 2, 3)|	Forward|
+|(2, 3, 0)	|Up	|(2, 3, 1)	|Up	|(2, 3, 2)|	Up|	(2, 3, 3)	|Forward|
+|(3, 0, 0)	|Right	|(3, 0, 1)|	Up	|(3, 0, 2)|	Forward	|(3, 0, 3)	|Right|
+|(3, 1, 0)|	Up	|(3, 1, 1)	|Right	|(3, 1, 2)|	Up	|(3, 1, 3)|	Right|
+|(3, 2, 0)	|Up	|(3, 2, 1)	|Right	|(3, 2, 2)	|Up	|(3, 2, 3)	|Right|
+|(3, 3, 0)	Left	(3, 3, 1)	Up	(3, 3, 2)	Up		| | |  
+
+It is observed that the best actions mostly belong to {Forward, Right, Up}. This is because from starting point (0, 0, 0) to ending point (3, 3, 3), all coordinates need to be incremented, which can be accomplished by these 3 actions.  
+
+For the first episode:  
+<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/graph.png" width = 730 height = 30>  
+For the last episode:  
+<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/graph.png" width = 730 height = 30>  
+In the process of Q-Learning, the number of total steps taken in an episode is decreases and the reward is increased, which means the agent performs better.  
+
+The graph of episode reward vs, episode is shown as below:  
+<img src = "https://github.com/StephanieMussi/Treasure_Hunting_RL/blob/main/Figures/graph.png" width = 300 height = 200>  
